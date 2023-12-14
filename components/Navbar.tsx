@@ -2,7 +2,7 @@ import Image from "next/image"
 
 import Link from "next/link"
 
-import { Icon } from "./Icon";
+import { Button } from "./Button";
 
 
 const NAV_LINKS = [
@@ -37,13 +37,21 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:flexCenter hidden">
-        <button className="flex items-center gap-x-2">
-          <Icon className="w-6 h-6 fill-black" 
-                name={'user'} />
-          Войти
-        </button>
-        
-      </div>                           
+        <Button
+          type="button"
+          text="Войти"
+          icon='user'
+          variant='btn_dark_green'
+        />
+      </div>
+
+      <Image 
+        src='svg/menu.svg'
+        alt="menu"
+        width={32}
+        height={32}
+        className="inline-block cursor-pointer lg:hidden"
+      />                        
     </nav>
   )
 }

@@ -13,7 +13,7 @@ export const Icon: React.FC <IconPros> = ({ className, name }) => {
     return (
         <svg
             role="img"
-            className={`${className}`}
+            className={`${className || ''} w-6 h-6`}
         >
             <use xlinkHref={`${icons.src}#${name}`} />
         </svg>
