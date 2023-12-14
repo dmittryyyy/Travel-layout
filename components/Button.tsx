@@ -8,17 +8,18 @@ interface ButtonPros {
     text: string;
     icon?: string;
     variant: string;
+    full?: boolean;
 }
 
-export const Button: React.FC <ButtonPros> = ({ className, type, text, variant, icon }) => {
+export const Button: React.FC <ButtonPros> = ({ className, type, text, variant, icon, full }) => {
   return (
     <button
-      className={`${className || ''}flexCenter gap-3 rounded-full ${variant}`}
+      className={`${className || ''}flexCenter gap-3 rounded-full border ${variant} ${full && 'w-full'}`}
       type={type}
 
     >
         {icon && (
-          <Icon 
+          <Icon
             name={icon}
           />
         )}
