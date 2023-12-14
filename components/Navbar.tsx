@@ -14,7 +14,7 @@ const NAV_LINKS = [
 ];
 
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <nav className="flexBetween 
                     max-container padding-container 
@@ -55,5 +55,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar
