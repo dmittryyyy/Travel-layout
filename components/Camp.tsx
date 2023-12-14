@@ -96,4 +96,4 @@ const Camp = () => {
   )
 }
 
-export default Camp
+export default Camp;
